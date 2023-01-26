@@ -43,6 +43,11 @@ markdown:
     # 标题固定锚点到此结束
     case: 0 # 转换锚点 ID 中的字母为大写或小写 # "0" 不转换, "1" 为小写, "2" 为大写.
     separator: '-' # 用于替换空格的符号. # 默认为 "-"
+excerpt:
+  depth: 4
+  excerpt_excludes: []
+  more_excludes: []
+  hideWholePostExcerpts: true
 title: Shage_Jack's Blog
 subtitle: ''
 description: ''
@@ -50,7 +55,7 @@ keywords: null
 author: Shage_Jack
 language: zh-CN
 timezone: ''
-url: http://example.com
+url: http://shagejack.github.io
 permalink: ':year/:month/:day/:title/'
 permalink_defaults: null
 pretty_urls:
