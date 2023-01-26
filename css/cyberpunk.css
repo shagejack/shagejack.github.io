@@ -10786,8 +10786,8 @@ article.media a:hover {
   color: #fcee09;
 }
 article.media .image {
-  width: 64px;
-  height: 64px;
+  width: 80px;
+  height: 80px;
 }
 article.media .image img {
   object-fit: cover;
@@ -10818,13 +10818,13 @@ article.article .content {
   letter-spacing: 0.08rem;
 }
 article.article .content h1 {
-  font-size: 2em;
-}
-article.article .content h2 {
   font-size: 1.75em;
 }
+article.article .content h2 {
+  font-size: 1.55em;
+}
 article.article .content h3 {
-  font-size: 1.5em;
+  font-size: 1.45em;
 }
 article.article .content h4 {
   font-size: 1.35em;
