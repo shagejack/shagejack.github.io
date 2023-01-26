@@ -1,8 +1,9 @@
 version: 5.1.0
 variant: default
-logo: /img/logo.svg
+logo: 
+    text: 临川荒冢
 head:
-    favicon: /img/favicon.svg
+    favicon: /images/website/favicon.svg
     manifest:
         name: 
         short_name: 
@@ -42,15 +43,11 @@ head:
     rss: 
 navbar:
     menu:
-        Home: /
-        Archives: /archives
-        Categories: /categories
-        Tags: /tags
-        About: /about
-    links:
-        Download on GitHub:
-            icon: fab fa-github
-            url: https://github.com/ppoffice/hexo-theme-icarus
+        首页: /
+        归档: /archives
+        分类: /categories
+        标签: /tags
+        关于: /about
 footer:
     links:
         Creative Commons:
@@ -84,30 +81,19 @@ search:
     index_pages: true
 comment:
     type: disqus
-    shortname: ''
-donates:
-    -
-        type: afdian
-        url: ''
-    -
-        type: alipay
-        qrcode: ''
-    -
-        type: buymeacoffee
-        url: ''
-    -
-        type: patreon
-        url: ''
-    -
-        type: paypal
-        business: ''
-        currency_code: USD
-    -
-        type: wechat
-        qrcode: ''
+    shortname: lin-chuan-huang-zhong
+#donates:
+#    -
+#        type: afdian
+#        url: ''
+#    -
+#        type: alipay
+#        qrcode: ''
+#    -
+#        type: wechat
+#        qrcode: ''
 share:
-    type: sharethis
-    install_url: ''
+    type: bdshare
 sidebar:
     left:
         sticky: false
@@ -117,47 +103,38 @@ widgets:
     -
         position: left
         type: profile
-        author: Your name
-        author_title: Your title
-        location: Your location
-        avatar: 
-        avatar_rounded: false
+        author: Shage_Jack
+        author_title: Nur der Entschluß, daß man das Denken als solches betrachten wolle, ist vorhanden.
+        location: Swamp
+        avatar: /images/website/avatar.jpg
+        avatar_rounded: true
         gravatar: 
-        follow_link: https://github.com/ppoffice
+        follow_link: https://www.zhihu.com/people/shagejack
         social_links:
             Github:
                 icon: fab fa-github
-                url: https://github.com/ppoffice
-            Facebook:
-                icon: fab fa-facebook
-                url: https://facebook.com
+                url: https://github.com/shagejack
             Twitter:
                 icon: fab fa-twitter
-                url: https://twitter.com
-            Dribbble:
-                icon: fab fa-dribbble
-                url: https://dribbble.com
-            RSS:
-                icon: fas fa-rss
-                url: /
+                url: https://twitter.com/shage_jack
+            Zhihu:
+                icon: fab fa-zhihu
+                url: https://www.zhihu.com/people/shagejack
+            Bilibili:
+                icon: fab fa-bilibili
+                url: https://space.bilibili.com/6494682
     -
+#        position: left
+#        type: links
+#        links:
+#            知乎主页: https://www.zhihu.com/people/shagejack
+#            B站主页: https://space.bilibili.com/6494682
+#    -
         position: left
-        type: toc
-        index: true
-        collapsed: true
-        depth: 3
-    -
-        position: left
-        type: links
-        links:
-            Hexo: https://hexo.io
-            Bulma: https://bulma.io
+        type: recent_posts
     -
         position: left
         type: categories
-    -
-        position: left
-        type: recent_posts
     -
         position: left
         type: archives
@@ -172,11 +149,6 @@ widgets:
         type: subscribe_email
         description: 
         feedburner_id: ''
-    -
-        position: left
-        type: adsense
-        client_id: ''
-        slot_id: ''
     -
         position: left
         type: followit
@@ -205,7 +177,7 @@ plugins:
         tracking_id: 
     hotjar:
         site_id: 
-    katex: false
+    katex: true
     mathjax: false
     outdated_browser: false
     progressbar: true

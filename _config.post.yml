@@ -1,0 +1,30 @@
+widgets:
+    -
+        position: left
+        type: profile
+        author: Shage_Jack
+        author_title: Nur der Entschluß, daß man das Denken als solches betrachten wolle, ist vorhanden.
+        location: Swamp
+        avatar: /images/website/avatar.jpg
+        avatar_rounded: true
+        gravatar: 
+        follow_link: https://www.zhihu.com/people/shagejack
+        social_links:
+            Github:
+                icon: fab fa-github
+                url: https://github.com/shagejack
+            Twitter:
+                icon: fab fa-twitter
+                url: https://twitter.com/shage_jack
+            Zhihu:
+                icon: fab fa-zhihu
+                url: https://www.zhihu.com/people/shagejack
+            Bilibili:
+                icon: fab fa-bilibili
+                url: https://space.bilibili.com/6494682
+    -
+        position: left
+        type: toc
+        index: false
+        collapsed: false
+        depth: 8
