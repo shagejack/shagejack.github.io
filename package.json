@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "build": "hexo generate",
+    "postinstall": "patch-package",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
     "server": "hexo server"
@@ -26,5 +27,8 @@
     "hexo-server": "^3.0.0",
     "hexo-theme-icarus": "^5.1.1",
     "hexo-theme-landscape": "^0.0.3"
+  },
+  "devDependencies": {
+    "patch-package": "^6.5.1"
   }
 }

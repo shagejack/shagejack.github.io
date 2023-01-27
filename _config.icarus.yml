@@ -1,7 +1,6 @@
 version: 5.1.0
 variant: default
-logo: 
-    text: 临川荒冢
+logo: /images/website/logo.svg
 head:
     favicon: /images/website/favicon.svg
     manifest:
@@ -98,7 +97,7 @@ sidebar:
     left:
         sticky: false
     right:
-        sticky: false
+        sticky: true
 widgets:
     -
         position: left
@@ -117,19 +116,25 @@ widgets:
             Twitter:
                 icon: fab fa-twitter
                 url: https://twitter.com/shage_jack
-            Zhihu:
+            Telegram:
+                icon: fab fa-telegram
+                url: https://t.me/Shage_Jack
+            知乎:
                 icon: fab fa-zhihu
                 url: https://www.zhihu.com/people/shagejack
-            Bilibili:
+            哔哩哔哩:
                 icon: fab fa-bilibili
                 url: https://space.bilibili.com/6494682
+            豆瓣:
+                icon: fa-solid fa-book
+                url: https://www.douban.com/people/shagejack
     -
-#        position: left
-#        type: links
-#        links:
-#            知乎主页: https://www.zhihu.com/people/shagejack
-#            B站主页: https://space.bilibili.com/6494682
-#    -
+        position: right
+        type: toc
+        index: false
+        collapsed: false
+        depth: 8
+    -
         position: left
         type: recent_posts
     -
@@ -144,6 +149,11 @@ widgets:
         order_by: name
         amount: 
         show_count: true
+    -
+        position: left
+        type: links
+        links:
+            TG频道 | 临川荒冢: https://t.me/riverbankgrave
     -
         position: left
         type: subscribe_email

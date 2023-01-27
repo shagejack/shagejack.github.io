@@ -1,0 +1,219 @@
+diff --git a/node_modules/hexo-theme-icarus/include/style/article.styl b/node_modules/hexo-theme-icarus/include/style/article.styl
+index fa8f763..84a0601 100644
+--- a/node_modules/hexo-theme-icarus/include/style/article.styl
++++ b/node_modules/hexo-theme-icarus/include/style/article.styl
+@@ -1,7 +1,8 @@
+ /* ---------------------------------
+  *    Article Summary and Content
+  * --------------------------------- */
+-$article-font-size ?= 1.1rem
++$article-font-size ?= 1.2rem
++$article-letter-spacing ?= 0.08rem
+ 
+ article
+     &.media
+@@ -14,8 +15,8 @@ article
+                 color: $primary
+ 
+         .image
+-            width: 64px
+-            height: 64px
++            width: 80px
++            height: 80px
+ 
+             img
+                 object-fit: cover
+@@ -53,24 +54,25 @@ article
+         .content
+             word-wrap: break-word
+             font-size: $article-font-size
++            letter-spacing: $article-letter-spacing
+ 
+             h1
+                 font-size: 1.75em
+ 
+             h2
+-                font-size: 1.5em
++                font-size: 1.55em
+ 
+             h3
+-                font-size: 1.25em
++                font-size: 1.45em
+ 
+             h4
+-                font-size: 1.125em
++                font-size: 1.35em
+ 
+             h5
+-                font-size: 1em
++                font-size: 1.25em
+ 
+             pre
+-                font-size: .85em
++                font-size: 0.85em
+ 
+             code
+                 padding: 0
+@@ -81,13 +83,18 @@ article
+                 &.pullquote
+                     float: right
+                     max-width: 50%
+-                    font-size: 1.15rem
++                    font-size: 1.5rem
+                     position: relative
+ 
+                 footer
+                     strong + cite
+                         margin-left: .5em
+ 
++            a
++                img
++                    margin: auto
++                    display: block
++
+             .message.message-immersive
+                 border-radius: 0
+                 margin: 0 0 - $card-content-padding $card-content-padding 0 - $card-content-padding
+diff --git a/node_modules/hexo-theme-icarus/include/style/base.styl b/node_modules/hexo-theme-icarus/include/style/base.styl
+index 6c3bbb9..eea529f 100644
+--- a/node_modules/hexo-theme-icarus/include/style/base.styl
++++ b/node_modules/hexo-theme-icarus/include/style/base.styl
+@@ -6,7 +6,7 @@ bulma-stylus-root = '../../../../node_modules/bulma-stylus/stylus'
+ $body-size ?= 14px
+ $body-background-color ?= #f7f7f7
+ 
+-$family-sans-serif ?= Ubuntu, Roboto, 'Open Sans', 'Microsoft YaHei', sans-serif
++$family-sans-serif ?= Lato, 'Noto Serif SC','Source Han Serif SC','Source Han Serif','source-han-serif-sc','PT Serif','SongTi SC','MicroSoft Yahei', sans-serif
+ $family-code ?= 'Source Code Pro', monospace, 'Microsoft YaHei'
+ 
+ $size-7 ?= .85rem
+@@ -25,9 +25,9 @@ $footer-background-color ?= $scheme-main
+ 
+ $gap ?= 64px
+ $tablet ?= 769px
+-$desktop ?= 1088px
+-$widescreen ?= 1280px
+-$fullhd ?= 1472px
++$desktop ?= 1440px
++$widescreen ?= 1680px
++$fullhd ?= 1800px
+ 
+ $shadow ?= 0 4px 10px rgba(0, 0, 0, 0.05)
+ 
+@@ -36,6 +36,7 @@ $title-weight ?= $weight-normal
+ $control-height ?= 2.25em
+ $button-padding-vertical ?= calc(0.375em - 1px)
+ 
++$radius = 15px
+ $card-radius ?= $radius
+ $card-media-margin ?= 0.75rem
+ $card-shadow ?= $shadow, 0 0 1px rgba(0, 0, 0, 0.1)
+diff --git a/node_modules/hexo-theme-icarus/include/style/responsive.styl b/node_modules/hexo-theme-icarus/include/style/responsive.styl
+index ad6be4d..6a58ba6 100644
+--- a/node_modules/hexo-theme-icarus/include/style/responsive.styl
++++ b/node_modules/hexo-theme-icarus/include/style/responsive.styl
+@@ -3,13 +3,13 @@
+  * --------------------------------- */
+ +widescreen()
+     .is-1-column .container, .is-2-column .container
+-        max-width: $desktop - 2 * $gap
+-        width: $desktop - 2 * $gap
++        max-width: $widescreen - 2 * $gap
++        width: $widescreen - 2 * $gap
+ 
+ +fullhd()
+     .is-2-column .container
+-        max-width: $widescreen - 2 * $gap
+-        width: $widescreen - 2 * $gap
++        max-width: $fullhd - 2 * $gap
++        width: $fullhd - 2 * $gap
+ 
+     .is-1-column .container
+         max-width: $desktop - 2 * $gap
+diff --git a/node_modules/hexo-theme-icarus/include/style/widget.styl b/node_modules/hexo-theme-icarus/include/style/widget.styl
+index b97231f..ae56012 100644
+--- a/node_modules/hexo-theme-icarus/include/style/widget.styl
++++ b/node_modules/hexo-theme-icarus/include/style/widget.styl
+@@ -63,3 +63,7 @@
+     .widget.card#toc, #toc-mask
+         &.is-active
+             display: block
++
++    #toc
++        max-height: calc(100vh - 22px)
++        overflow-y: scroll
+\ No newline at end of file
+diff --git a/node_modules/hexo-theme-icarus/layout/common/article.jsx b/node_modules/hexo-theme-icarus/layout/common/article.jsx
+index 28d48a9..379aa4f 100644
+--- a/node_modules/hexo-theme-icarus/layout/common/article.jsx
++++ b/node_modules/hexo-theme-icarus/layout/common/article.jsx
+@@ -44,7 +44,7 @@ module.exports = class extends Component {
+                 </div> : null}
+                 <article class={`card-content article${'direction' in page ? ' ' + page.direction : ''}`} role="article">
+                     {/* Metadata */}
+-                    {page.layout !== 'page' ? <div class="article-meta is-size-7 is-uppercase level is-mobile">
++                    {page.layout !== 'page' ? <div class="article-meta is-size-5 is-uppercase level is-mobile">
+                         <div class="level-left">
+                             {/* Creation Date */}
+                             {page.date && <span class="level-item" dangerouslySetInnerHTML={{
+@@ -84,7 +84,7 @@ module.exports = class extends Component {
+                         </div>
+                     </div> : null}
+                     {/* Title */}
+-                    {page.title !== '' ? <h1 class="title is-3 is-size-4-mobile">
++                    {page.title !== '' ? <h1 class="title is-3 is-size-3-mobile">
+                         {index ? <a class="link-muted" href={url_for(page.link || page.path)}>{page.title}</a> : page.title}
+                     </h1> : null}
+                     {/* Content/Excerpt */}
+@@ -93,7 +93,7 @@ module.exports = class extends Component {
+                     {!index && article && article.licenses && Object.keys(article.licenses)
+                         ? <ArticleLicensing.Cacheable page={page} config={config} helper={helper} /> : null}
+                     {/* Tags */}
+-                    {!index && page.tags && page.tags.length ? <div class="article-tags is-size-7 mb-4">
++                    {!index && page.tags && page.tags.length ? <div class="article-tags is-size-6 mb-4">
+                         <span class="mr-2">#</span>
+                         {page.tags.map(tag => {
+                             return <a class="link-muted mr-2" rel="tag" href={url_for(tag.path)}>{tag.name}</a>;
+diff --git a/node_modules/hexo-theme-icarus/layout/common/widgets.jsx b/node_modules/hexo-theme-icarus/layout/common/widgets.jsx
+index a8f4688..b426e9b 100644
+--- a/node_modules/hexo-theme-icarus/layout/common/widgets.jsx
++++ b/node_modules/hexo-theme-icarus/layout/common/widgets.jsx
+@@ -39,9 +39,9 @@ function getColumnCount(widgets, config, page) {
+ function getColumnSizeClass(columnCount) {
+     switch (columnCount) {
+         case 2:
+-            return 'is-4-tablet is-4-desktop is-4-widescreen';
++            return 'is-3-tablet is-3-desktop is-3-widescreen';
+         case 3:
+-            return 'is-4-tablet is-4-desktop is-3-widescreen';
++            return 'is-3-tablet is-3-desktop is-2-widescreen';
+     }
+     return '';
+ }
+diff --git a/node_modules/hexo-theme-icarus/layout/layout.jsx b/node_modules/hexo-theme-icarus/layout/layout.jsx
+index 098a278..c9eefda 100644
+--- a/node_modules/hexo-theme-icarus/layout/layout.jsx
++++ b/node_modules/hexo-theme-icarus/layout/layout.jsx
+@@ -26,8 +26,8 @@ module.exports = class extends Component {
+                                 'order-2': true,
+                                 'column-main': true,
+                                 'is-12': columnCount === 1,
+-                                'is-8-tablet is-8-desktop is-8-widescreen': columnCount === 2,
+-                                'is-8-tablet is-8-desktop is-6-widescreen': columnCount === 3
++                                'is-9-tablet is-9-desktop is-9-widescreen': columnCount === 2,
++                                'is-9-tablet is-9-desktop is-7-widescreen': columnCount === 3
+                             })} dangerouslySetInnerHTML={{ __html: body }}></div>
+                             <Widgets site={site} config={config} helper={helper} page={page} position={'left'} />
+                             <Widgets site={site} config={config} helper={helper} page={page} position={'right'} />
+diff --git a/node_modules/hexo-theme-icarus/source/js/main.js b/node_modules/hexo-theme-icarus/source/js/main.js
+index 76891f5..b15cb28 100644
+--- a/node_modules/hexo-theme-icarus/source/js/main.js
++++ b/node_modules/hexo-theme-icarus/source/js/main.js
+@@ -122,6 +122,7 @@
+ 
+     const $toc = $('#toc');
+     if ($toc.length > 0) {
++        $toc.addClass('column-left is-sticky');
+         const $mask = $('<div>');
+         $mask.attr('id', 'toc-mask');
+ 
