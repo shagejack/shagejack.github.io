@@ -80,7 +80,7 @@ search:
     index_pages: true
 comment:
     type: disqus
-    shortname: lin-chuan-huang-zhong
+    shortname: riverbankgrave
 #donates:
 #    -
 #        type: afdian
