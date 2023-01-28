@@ -412,13 +412,13 @@ button,
 input,
 select,
 textarea {
-  font-family: Lato, 'Noto Serif SC', 'Source Han Serif SC', 'Source Han Serif', 'source-han-serif-sc', 'PT Serif', 'SongTi SC', 'MicroSoft Yahei', sans-serif;
+  font-family: 'Noto Serif SC', 'Microsoft YaHei', Ubuntu, Roboto, 'Open Sans', sans-serif;
 }
 code,
 pre {
   -moz-osx-font-smoothing: auto;
   -webkit-font-smoothing: auto;
-  font-family: 'Source Code Pro', monospace, 'Microsoft YaHei';
+  font-family: 'Fira Code', 'Source Code Pro', monospace, 'Microsoft YaHei';
 }
 body {
   color: #4a4a4a;
@@ -1064,19 +1064,19 @@ a.has-text-grey-lightest:focus {
   font-weight: 700 !important;
 }
 .is-family-primary {
-  font-family: Lato, 'Noto Serif SC', 'Source Han Serif SC', 'Source Han Serif', 'source-han-serif-sc', 'PT Serif', 'SongTi SC', 'MicroSoft Yahei', sans-serif !important;
+  font-family: 'Noto Serif SC', 'Microsoft YaHei', Ubuntu, Roboto, 'Open Sans', sans-serif !important;
 }
 .is-family-secondary {
-  font-family: Lato, 'Noto Serif SC', 'Source Han Serif SC', 'Source Han Serif', 'source-han-serif-sc', 'PT Serif', 'SongTi SC', 'MicroSoft Yahei', sans-serif !important;
+  font-family: 'Noto Serif SC', 'Microsoft YaHei', Ubuntu, Roboto, 'Open Sans', sans-serif !important;
 }
 .is-family-sans-serif {
-  font-family: Lato, 'Noto Serif SC', 'Source Han Serif SC', 'Source Han Serif', 'source-han-serif-sc', 'PT Serif', 'SongTi SC', 'MicroSoft Yahei', sans-serif !important;
+  font-family: 'Noto Serif SC', 'Microsoft YaHei', Ubuntu, Roboto, 'Open Sans', sans-serif !important;
 }
 .is-family-monospace {
   font-family: monospace !important;
 }
 .is-family-code {
-  font-family: 'Source Code Pro', monospace, 'Microsoft YaHei' !important;
+  font-family: 'Fira Code', 'Source Code Pro', monospace, 'Microsoft YaHei' !important;
 }
 .is-block {
   display: block !important;
@@ -6229,7 +6229,7 @@ a.tag:hover {
 .title {
   color: #363636;
   font-size: 2rem;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1.125;
 }
 .title strong {
@@ -10813,23 +10813,27 @@ article.article .article-meta {
 }
 article.article .content {
   word-wrap: break-word;
-  font-size: 1.2rem;
-  letter-spacing: 0.08rem;
+  font-size: 1.3rem;
 }
 article.article .content h1 {
   font-size: 1.75em;
+  font-weight: bold;
 }
 article.article .content h2 {
   font-size: 1.55em;
+  font-weight: bold;
 }
 article.article .content h3 {
   font-size: 1.45em;
+  font-weight: bold;
 }
 article.article .content h4 {
   font-size: 1.35em;
+  font-weight: bold;
 }
 article.article .content h5 {
   font-size: 1.25em;
+  font-weight: bold;
 }
 article.article .content pre {
   font-size: 0.85em;
@@ -11304,7 +11308,7 @@ figure.highlight figcaption * {
 }
 figure.highlight figcaption span {
   font-weight: 500;
-  font-family: 'Source Code Pro', monospace, 'Microsoft YaHei';
+  font-family: 'Fira Code', 'Source Code Pro', monospace, 'Microsoft YaHei';
 }
 figure.highlight figcaption .level-left *:not(:last-child) {
   margin-right: 0.5em;
@@ -11609,7 +11613,7 @@ figure.highlight.foldable div.level-left {
 .cc-window,
 .cc-revoke {
   font-size: 1.1rem !important;
-  font-family: Lato, 'Noto Serif SC', 'Source Han Serif SC', 'Source Han Serif', 'source-han-serif-sc', 'PT Serif', 'SongTi SC', 'MicroSoft Yahei', sans-serif !important;
+  font-family: 'Noto Serif SC', 'Microsoft YaHei', Ubuntu, Roboto, 'Open Sans', sans-serif !important;
 }
 .cc-window {
   color: #4a4a4a !important;

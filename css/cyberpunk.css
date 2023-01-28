@@ -6229,7 +6229,7 @@ a.tag:hover {
 .title {
   color: #fcee09;
   font-size: 2rem;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1.125;
 }
 .title strong {
@@ -10814,23 +10814,27 @@ article.article .article-meta {
 }
 article.article .content {
   word-wrap: break-word;
-  font-size: 1.2rem;
-  letter-spacing: 0.08rem;
+  font-size: 1.3rem;
 }
 article.article .content h1 {
   font-size: 1.75em;
+  font-weight: bold;
 }
 article.article .content h2 {
   font-size: 1.55em;
+  font-weight: bold;
 }
 article.article .content h3 {
   font-size: 1.45em;
+  font-weight: bold;
 }
 article.article .content h4 {
   font-size: 1.35em;
+  font-weight: bold;
 }
 article.article .content h5 {
   font-size: 1.25em;
+  font-weight: bold;
 }
 article.article .content pre {
   font-size: 0.85em;
