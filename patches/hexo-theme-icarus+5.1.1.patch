@@ -1,18 +1,17 @@
 diff --git a/node_modules/hexo-theme-icarus/include/style/article.styl b/node_modules/hexo-theme-icarus/include/style/article.styl
-index fa8f763..84a0601 100644
+index fa8f763..8bfe947 100644
 --- a/node_modules/hexo-theme-icarus/include/style/article.styl
 +++ b/node_modules/hexo-theme-icarus/include/style/article.styl
-@@ -1,7 +1,8 @@
+@@ -1,7 +1,7 @@
  /* ---------------------------------
   *    Article Summary and Content
   * --------------------------------- */
 -$article-font-size ?= 1.1rem
-+$article-font-size ?= 1.2rem
-+$article-letter-spacing ?= 0.08rem
++$article-font-size ?= 1.3rem
  
  article
      &.media
-@@ -14,8 +15,8 @@ article
+@@ -14,8 +14,8 @@ article
                  color: $primary
  
          .image
@@ -23,30 +22,31 @@ index fa8f763..84a0601 100644
  
              img
                  object-fit: cover
-@@ -53,24 +54,25 @@ article
-         .content
-             word-wrap: break-word
-             font-size: $article-font-size
-+            letter-spacing: $article-letter-spacing
+@@ -56,21 +56,26 @@ article
  
              h1
                  font-size: 1.75em
++                font-weight: bold
  
              h2
 -                font-size: 1.5em
 +                font-size: 1.55em
++                font-weight: bold
  
              h3
 -                font-size: 1.25em
 +                font-size: 1.45em
++                font-weight: bold
  
              h4
 -                font-size: 1.125em
 +                font-size: 1.35em
++                font-weight: bold
  
              h5
 -                font-size: 1em
 +                font-size: 1.25em
++                font-weight: bold
  
              pre
 -                font-size: .85em
@@ -54,7 +54,7 @@ index fa8f763..84a0601 100644
  
              code
                  padding: 0
-@@ -81,13 +83,18 @@ article
+@@ -81,13 +86,18 @@ article
                  &.pullquote
                      float: right
                      max-width: 50%
@@ -75,19 +75,21 @@ index fa8f763..84a0601 100644
                  border-radius: 0
                  margin: 0 0 - $card-content-padding $card-content-padding 0 - $card-content-padding
 diff --git a/node_modules/hexo-theme-icarus/include/style/base.styl b/node_modules/hexo-theme-icarus/include/style/base.styl
-index 6c3bbb9..eea529f 100644
+index 6c3bbb9..14c0740 100644
 --- a/node_modules/hexo-theme-icarus/include/style/base.styl
 +++ b/node_modules/hexo-theme-icarus/include/style/base.styl
-@@ -6,7 +6,7 @@ bulma-stylus-root = '../../../../node_modules/bulma-stylus/stylus'
+@@ -6,8 +6,8 @@ bulma-stylus-root = '../../../../node_modules/bulma-stylus/stylus'
  $body-size ?= 14px
  $body-background-color ?= #f7f7f7
  
 -$family-sans-serif ?= Ubuntu, Roboto, 'Open Sans', 'Microsoft YaHei', sans-serif
-+$family-sans-serif ?= Lato, 'Noto Serif SC','Source Han Serif SC','Source Han Serif','source-han-serif-sc','PT Serif','SongTi SC','MicroSoft Yahei', sans-serif
- $family-code ?= 'Source Code Pro', monospace, 'Microsoft YaHei'
+-$family-code ?= 'Source Code Pro', monospace, 'Microsoft YaHei'
++$family-sans-serif ?= 'Noto Serif SC', 'Microsoft YaHei', Ubuntu, Roboto, 'Open Sans', sans-serif
++$family-code ?= 'Fira Code', 'Source Code Pro', monospace, 'Microsoft YaHei'
  
  $size-7 ?= .85rem
-@@ -25,9 +25,9 @@ $footer-background-color ?= $scheme-main
+ $size-small ?= .75rem
+@@ -25,17 +25,18 @@ $footer-background-color ?= $scheme-main
  
  $gap ?= 64px
  $tablet ?= 769px
@@ -100,7 +102,9 @@ index 6c3bbb9..eea529f 100644
  
  $shadow ?= 0 4px 10px rgba(0, 0, 0, 0.05)
  
-@@ -36,6 +36,7 @@ $title-weight ?= $weight-normal
+-$title-weight ?= $weight-normal
++$title-weight ?= $weight-bold
+ 
  $control-height ?= 2.25em
  $button-padding-vertical ?= calc(0.375em - 1px)
  
@@ -144,7 +148,7 @@ index b97231f..ae56012 100644
 +        overflow-y: scroll
 \ No newline at end of file
 diff --git a/node_modules/hexo-theme-icarus/layout/common/article.jsx b/node_modules/hexo-theme-icarus/layout/common/article.jsx
-index 28d48a9..379aa4f 100644
+index 28d48a9..37c19d9 100644
 --- a/node_modules/hexo-theme-icarus/layout/common/article.jsx
 +++ b/node_modules/hexo-theme-icarus/layout/common/article.jsx
 @@ -44,7 +44,7 @@ module.exports = class extends Component {
@@ -161,7 +165,7 @@ index 28d48a9..379aa4f 100644
                      </div> : null}
                      {/* Title */}
 -                    {page.title !== '' ? <h1 class="title is-3 is-size-4-mobile">
-+                    {page.title !== '' ? <h1 class="title is-3 is-size-3-mobile">
++                    {page.title !== '' ? <h1 class="title is-2 is-size-2-mobile">
                          {index ? <a class="link-muted" href={url_for(page.link || page.path)}>{page.title}</a> : page.title}
                      </h1> : null}
                      {/* Content/Excerpt */}
@@ -174,6 +178,19 @@ index 28d48a9..379aa4f 100644
                          <span class="mr-2">#</span>
                          {page.tags.map(tag => {
                              return <a class="link-muted mr-2" rel="tag" href={url_for(tag.path)}>{tag.name}</a>;
+diff --git a/node_modules/hexo-theme-icarus/layout/common/head.jsx b/node_modules/hexo-theme-icarus/layout/common/head.jsx
+index 887713d..92d37fd 100644
+--- a/node_modules/hexo-theme-icarus/layout/common/head.jsx
++++ b/node_modules/hexo-theme-icarus/layout/common/head.jsx
+@@ -53,7 +53,7 @@ module.exports = class extends Component {
+ 
+         const language = page.lang || page.language || config.language;
+         const fontCssUrl = {
+-            default: fontcdn('Ubuntu:wght@400;600&family=Source+Code+Pro', 'css2'),
++            default: fontcdn('Noto+Serif+SC:wght@300;600&family=Roboto+Mono', 'css2'),
+             cyberpunk: fontcdn('Oxanium:wght@300;400;600&family=Roboto+Mono', 'css2')
+         };
+ 
 diff --git a/node_modules/hexo-theme-icarus/layout/common/widgets.jsx b/node_modules/hexo-theme-icarus/layout/common/widgets.jsx
 index a8f4688..b426e9b 100644
 --- a/node_modules/hexo-theme-icarus/layout/common/widgets.jsx

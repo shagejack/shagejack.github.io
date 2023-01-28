@@ -1,5 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="949" height="256" viewbox="0 0 949 256">
-    <text kerning="auto" fill="rgb(51, 51, 51)" x="300" y="184" font-size="160" font-family="Noto Sans TC" font-weight="300">&#20020;&#24029;&#33618;&#20898;</text>
+    <defs>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300');
+        </style>
+    </defs>
+    <text kerning="auto" fill="rgb(51, 51, 51)" x="300" y="184" font-size="160" font-family="Noto Serif SC" font-weight="300">&#20020;&#24029;&#33618;&#20898;</text>
     <image id="image0" width="256" height="256" x="0" y="0"
 href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAn8AAAKACAYAAADtih43AAAABGdBTUEAALGPC/xhBQAAACBjSFJN
 AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QA/wD/AP+gvaeTAAAA
