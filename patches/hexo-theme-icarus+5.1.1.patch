@@ -135,7 +135,7 @@ index ad6be4d..6a58ba6 100644
      .is-1-column .container
          max-width: $desktop - 2 * $gap
 diff --git a/node_modules/hexo-theme-icarus/include/style/widget.styl b/node_modules/hexo-theme-icarus/include/style/widget.styl
-index b97231f..ae56012 100644
+index b97231f..799a547 100644
 --- a/node_modules/hexo-theme-icarus/include/style/widget.styl
 +++ b/node_modules/hexo-theme-icarus/include/style/widget.styl
 @@ -63,3 +63,7 @@
@@ -143,10 +143,9 @@ index b97231f..ae56012 100644
          &.is-active
              display: block
 +
-+    #toc
-+        max-height: calc(100vh - 22px)
-+        overflow-y: scroll
-\ No newline at end of file
++#toc
++    max-height: calc(100vh - 22px)
++    overflow-y: scroll
 diff --git a/node_modules/hexo-theme-icarus/layout/common/article.jsx b/node_modules/hexo-theme-icarus/layout/common/article.jsx
 index 28d48a9..37c19d9 100644
 --- a/node_modules/hexo-theme-icarus/layout/common/article.jsx

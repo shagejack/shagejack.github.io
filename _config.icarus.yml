@@ -133,7 +133,7 @@ widgets:
         type: toc
         index: false
         collapsed: false
-        depth: 8
+        depth: 5
     -
         position: left
         type: recent_posts
