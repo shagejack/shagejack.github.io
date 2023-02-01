@@ -11420,10 +11420,10 @@ figure.highlight.foldable div.level-left {
   #toc-mask.is-active {
     display: block;
   }
-  #toc {
-    max-height: calc(100vh - 22px);
-    overflow-y: scroll;
-  }
+}
+#toc {
+  max-height: calc(100vh - 22px);
+  overflow-y: scroll;
 }
 .donate {
   position: relative;
