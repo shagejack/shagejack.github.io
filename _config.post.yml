@@ -16,12 +16,18 @@ widgets:
             Twitter:
                 icon: fab fa-twitter
                 url: https://twitter.com/shage_jack
-            Zhihu:
+            Telegram:
+                icon: fab fa-telegram
+                url: https://t.me/Shage_Jack
+            知乎:
                 icon: fab fa-zhihu
                 url: https://www.zhihu.com/people/shagejack
-            Bilibili:
+            哔哩哔哩:
                 icon: fab fa-bilibili
                 url: https://space.bilibili.com/6494682
+            豆瓣:
+                icon: fa-solid fa-book
+                url: https://www.douban.com/people/shagejack
     -
         position: left
         type: toc
