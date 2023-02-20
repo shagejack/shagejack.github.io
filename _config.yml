@@ -7,7 +7,7 @@ markdown:
     langPrefix: 'language-' # 只适用 Hexo 默认的两个高亮插件禁用时 # 为围栏代码块中语法定义选项渲染后自动添加 class 名前缀, 如 ---html 渲染为 <class="language-html">
     breaks: false # true 则将所有换行渲染为 <br> 标签 # 这种行为不属于 CommandMark 和 GFM.
     linkify: false # true 则自动解析链接并添加为 <a> 标签, false 则将链接渲染为文本.
-    typographer: true # 默认 true # 自动转义各种排版用字符, 如 ©
+    typographer: false # 默认 true # 自动转义各种排版用字符, 如 ©
     quotes: '“”‘’' # 当 typographer 定义为 true 时的自动转换引号的行为, quotes: '“”‘’' 则表示将 "123" '123'转换为 “123” ‘123’
 # render 选项到此结束
   enable_rules:
