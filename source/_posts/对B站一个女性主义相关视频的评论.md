@@ -1,21 +1,22 @@
 ---
 title: 对B站一个女性主义相关视频的评论
-date: 2022-12-06 22:28:00
-updated: 2022-12-06 22:18:00
 toc: true
 cover: /images/posts/视频封面_BV1kP4y1n7Kd.jpg
 thumbnail: /images/posts/视频封面_BV1kP4y1n7Kd.jpg
-categories: 
-- [文章]
-- [键政]
+categories:
+  - - 文章
+  - - 键政
 tags:
-- 哔哩哔哩
-- 上野千鹤子
-- 女性主义
-- 家庭
-- 性别问题
-- 评论
+  - 哔哩哔哩
+  - 上野千鹤子
+  - 女性主义
+  - 家庭
+  - 性别问题
+  - 评论
 disqusId: comments-on-a-bilibili-video-about-feminism-0
+abbrlink: 646b60f7
+date: 2022-12-06 22:28:00
+updated: 2022-12-06 22:18:00
 ---
 
 ## [原视频（“翻译翻译！”在日本父亲和老板怎么塑造一个好女人，BV1kP4y1n7Kd）](https://www.bilibili.com/video/BV1kP4y1n7Kd)

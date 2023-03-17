@@ -43,6 +43,20 @@ markdown:
     # 标题固定锚点到此结束
     case: 0 # 转换锚点 ID 中的字母为大写或小写 # "0" 不转换, "1" 为小写, "2" 为大写.
     separator: '-' # 用于替换空格的符号. # 默认为 "-"
+# abbrlink config
+abbrlink:
+  alg: crc32      #support crc16(default) and crc32
+  rep: hex        #support dec(default) and hex
+  drafts: false   #(true)Process draft,(false)Do not process draft. false(default) 
+  # Generate categories from directory-tree
+  # depth: the max_depth of directory-tree you want to generate, should > 0
+  auto_category:
+     enable: true  #true(default)
+     depth:        #3(default)
+     over_write: false 
+  auto_title: false #enable auto title, it can auto fill the title by path
+  auto_date: false #enable auto date, it can auto fill the date by time today
+  force: false #enable force mode,in this mode, the plugin will ignore the cache, and calc the abbrlink for every post even it already had abbrlink. This only updates abbrlink rather than other front variables.
 excerpt:
   depth: 4
   excerpt_excludes: []
@@ -56,7 +70,8 @@ author: Shage_Jack
 language: zh-CN
 timezone: ''
 url: http://shagejack.github.io
-permalink: ':year/:month/:day/:title/'
+# permalink: ':year/:month/:day/:title/'
+permalink: posts/:abbrlink/
 permalink_defaults: null
 pretty_urls:
   trailing_index: true
