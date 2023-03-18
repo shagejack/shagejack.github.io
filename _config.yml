@@ -69,7 +69,7 @@ keywords: null
 author: Shage_Jack
 language: zh-CN
 timezone: ''
-url: http://shagejack.github.io
+url: http://shagejack.blog
 # permalink: ':year/:month/:day/:title/'
 permalink: posts/:abbrlink/
 permalink_defaults: null
