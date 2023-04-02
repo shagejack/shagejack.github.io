@@ -30,6 +30,7 @@ markdown:
     - markdown-it-mark # https://github.com/markdown-it/markdown-it-mark
     - markdown-it-sub # https://github.com/markdown-it/markdown-it-sub
     - markdown-it-sup # https://github.com/markdown-it/markdown-it-sup
+    - '@renbaoshuo/markdown-it-katex'
 #以下为额外安装插件
 #    - markdown-it-task-lists # https://github.com/revin/markdown-it-task-lists
   anchors: # 锚点的配置

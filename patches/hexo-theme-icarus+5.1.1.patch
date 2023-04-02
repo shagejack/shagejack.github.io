@@ -135,7 +135,7 @@ index ad6be4d..6a58ba6 100644
      .is-1-column .container
          max-width: $desktop - 2 * $gap
 diff --git a/node_modules/hexo-theme-icarus/include/style/widget.styl b/node_modules/hexo-theme-icarus/include/style/widget.styl
-index b97231f..799a547 100644
+index b97231f..e0d3109 100644
 --- a/node_modules/hexo-theme-icarus/include/style/widget.styl
 +++ b/node_modules/hexo-theme-icarus/include/style/widget.styl
 @@ -63,3 +63,7 @@
@@ -146,6 +146,7 @@ index b97231f..799a547 100644
 +#toc
 +    max-height: calc(100vh - 22px)
 +    overflow-y: scroll
+\ No newline at end of file
 diff --git a/node_modules/hexo-theme-icarus/layout/common/article.jsx b/node_modules/hexo-theme-icarus/layout/common/article.jsx
 index 28d48a9..37c19d9 100644
 --- a/node_modules/hexo-theme-icarus/layout/common/article.jsx
@@ -221,6 +222,29 @@ index 098a278..c9eefda 100644
                              })} dangerouslySetInnerHTML={{ __html: body }}></div>
                              <Widgets site={site} config={config} helper={helper} page={page} position={'left'} />
                              <Widgets site={site} config={config} helper={helper} page={page} position={'right'} />
+diff --git a/node_modules/hexo-theme-icarus/source/css/riverbankgrave.styl b/node_modules/hexo-theme-icarus/source/css/riverbankgrave.styl
+new file mode 100644
+index 0000000..52cb7ba
+--- /dev/null
++++ b/node_modules/hexo-theme-icarus/source/css/riverbankgrave.styl
+@@ -0,0 +1,5 @@
++// Background image
++body
++    background: url("/images/website/bg.jpg") no-repeat;
++    background-attachment: fixed;
++    background-size: cover; 
+\ No newline at end of file
+diff --git a/node_modules/hexo-theme-icarus/source/css/style.styl b/node_modules/hexo-theme-icarus/source/css/style.styl
+index b970636..cd082f5 100644
+--- a/node_modules/hexo-theme-icarus/source/css/style.styl
++++ b/node_modules/hexo-theme-icarus/source/css/style.styl
+@@ -16,3 +16,5 @@
+ @import '../../include/style/donate'
+ @import '../../include/style/plugin'
+ @import '../../include/style/responsive'
++
++@import "riverbankgrave"
+\ No newline at end of file
 diff --git a/node_modules/hexo-theme-icarus/source/js/main.js b/node_modules/hexo-theme-icarus/source/js/main.js
 index 76891f5..b15cb28 100644
 --- a/node_modules/hexo-theme-icarus/source/js/main.js
