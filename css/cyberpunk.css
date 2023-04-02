@@ -11692,6 +11692,11 @@ figure.highlight.foldable div.level-left {
   }
 }
 body {
+  background: url("/images/website/bg.jpg") no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+body {
   counter-reset: card;
 }
 ::selection {

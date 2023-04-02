@@ -11690,3 +11690,8 @@ figure.highlight.foldable div.level-left {
     padding: 1.5rem 1rem;
   }
 }
+body {
+  background: url("/images/website/bg.jpg") no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
